@@ -1,19 +1,23 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lab — Private</title>
   <link rel="stylesheet" href="/site.css" />
   <link rel="icon" href="/icon.png" type="image/png" sizes="512x512">
-  <meta name="theme-color" content="#c1121f">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta property="og:image" content="/icon.png">
+  <meta property="og:title" content="Lab — Private">
+  <meta property="og:description" content="Private sandbox for AI and API experiments.">
 </head>
 <body>
   <div class="container">
     <header class="topbar">
-      <div class="brand-wrap">
-        <img src="/logo-horizontal.png" alt="Eóin Mc Tiernan logo" class="logo" />
-        <strong>Lab</strong><span class="muted">/ private experiments</span>
+      <div class="brand">
+        <img src="/logo-horizontal.png" alt="Eóin logo" class="logo" />
+        <span class="muted">/ private lab</span>
       </div>
       <nav class="nav">
         <a href="/">Home</a><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/lab/">Lab</a>
@@ -22,11 +26,18 @@
 
     <section class="section" data-section>
       <h1>Private Lab</h1>
-      <p class="muted">Welcome, Eóin. This area is protected. Build and break things freely.</p>
+      <p class="muted">This area is gated via middleware. Add experiments freely.</p>
       <div class="grid">
-        <div class="card" data-tilt>
-          <h3>Scratchpad</h3>
-          <p>Dump ideas, notes, and todos.</p>
-        </div>
-        <div class="card" data-tilt>
-         
+        <div class="card" data-tilt><h3 style="color:var(--brand)">Playground</h3><p>Put HTML/JS tests here. Keep keys server-side where needed.</p></div>
+        <div class="card" data-tilt><h3 style="color:var(--brand)">Scratchpad</h3><p>Notes for prompts, APIs, and flows.</p></div>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Eóin</footer>
+  </div>
+
+  <div id="spotlightOverlay"><div id="spotlight"><input id="spotlightInput" placeholder="Type a command or page…" /><div id="results"></div></div></div>
+  <script src="/site.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
