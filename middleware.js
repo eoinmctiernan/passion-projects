@@ -1,24 +1,18 @@
 import { NextResponse } from "next/server";
+export const config = { matcher: "/lab/:path*" };
 
-export const config = {
-  matcher: "/lab/:path*",
-};
+// Set in Vercel → Project → Settings → Environment Variables
+const USER = process.env.LAB_USER || "eoin";
+const PASS = process.env.LAB_PASS || "buster123";
 
 export function middleware(req) {
-  const basicAuth = req.headers.get("authorization");
-
-  if (basicAuth) {
-    const authValue = basicAuth.split(" ")[1];
-    const [user, pwd] = atob(authValue).split(":");
-    if (user === "eoin" && pwd === "buster123") {
-      return NextResponse.next();
-    }
+  const auth = req.headers.get("authorization");
+  if (auth) {
+    const [user, pwd] = atob(auth.split(" ")[1]).split(":");
+    if (user === USER && pwd === PASS) return NextResponse.next();
   }
-
   return new Response("Auth required", {
     status: 401,
-    headers: {
-      "WWW-Authenticate": 'Basic realm="Secure Area"',
-    },
+    headers: { "WWW-Authenticate": 'Basic realm="Private Lab"' },
   });
 }
