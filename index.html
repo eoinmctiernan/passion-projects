@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eóin — Experiments & Lab</title>
+  <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="/site.css" />
-  <meta name="color-scheme" content="dark light" />
+
+  <!-- Icons + social -->
+  <link rel="icon" href="/icon.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <meta name="theme-color" content="#c1121f">
+  <meta property="og:image" content="/icon.png">
+  <meta property="og:title" content="Eóin — Experiments & Lab">
+  <meta property="og:description" content="Exploring systems, automation and digital growth.">
 </head>
 <body>
   <div class="container">
     <header class="topbar">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
+      <div class="brand-wrap">
+        <img src="/logo-horizontal.png" alt="Eóin Mc Tiernan logo" class="logo" />
         <strong>Eóin Mc Tiernan</strong>
         <span class="muted">/ Experiments</span>
       </div>
@@ -20,27 +28,21 @@
         <a href="/about/">About</a>
         <a href="/projects/">Projects</a>
         <a href="/lab/">Lab</a>
-        <button class="btn" onclick="setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark')">
-          Toggle theme
-        </button>
+        <button class="btn" onclick="setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark')">Toggle theme</button>
       </nav>
     </header>
 
     <section class="section" data-section>
       <h1 style="margin:10px 0 8px 0;">Build. Ship. Learn.</h1>
-
       <div class="grid">
         <a class="card" data-tilt href="/projects/">
-          <h3>Projects</h3>
-          <p>Live builds, tiny tools, and experiments.</p>
+          <h3>Projects</h3><p>Live builds, tiny tools, and experiments.</p>
         </a>
         <a class="card" data-tilt href="/lab/">
-          <h3>AI Lab</h3>
-          <p>Cost-free AI & API experiments (HuggingFace, public endpoints).</p>
+          <h3>AI Lab</h3><p>Cost-free AI & API experiments.</p>
         </a>
         <a class="card" data-tilt href="/about/">
-          <h3>About</h3>
-          <p>What I do, how I work, and what I’m exploring.</p>
+          <h3>About</h3><p>What I do, how I work, and what I’m exploring.</p>
         </a>
       </div>
     </section>
@@ -48,24 +50,13 @@
     <section class="section" data-section>
       <h2>Now / Focus</h2>
       <div class="grid">
-        <div class="card" data-tilt>
-          <h3>Systems for Growth</h3>
-          <p>Identifying bottlenecks, tooling for visibility, and cross-team loops.</p>
-        </div>
-        <div class="card" data-tilt>
-          <h3>Event → Deal Flow</h3>
-          <p>Trade-show lead capture → nurture → CRM hygiene.</p>
-        </div>
-        <div class="card" data-tilt>
-          <h3>AI x Ops</h3>
-          <p>Automation pilots in reporting, notes, and translation.</p>
-        </div>
+        <div class="card" data-tilt><h3>Systems for Growth</h3><p>Identify bottlenecks, create visibility, close loops.</p></div>
+        <div class="card" data-tilt><h3>Event → Deal Flow</h3><p>Lead capture → nurture → CRM hygiene.</p></div>
+        <div class="card" data-tilt><h3>AI × Ops</h3><p>Automation pilots in reporting, notes, translation.</p></div>
       </div>
     </section>
 
-    <footer class="footer">
-      © <span id="y"></span> Eóin — Press <span class="kbd">Cmd/Ctrl</span>+<span class="kbd">K</span>
-    </footer>
+    <footer class="footer">© <span id="y"></span> Eóin — Press <span class="kbd">Cmd/Ctrl</span>+<span class="kbd">K</span></footer>
   </div>
 
   <!-- Spotlight -->
@@ -77,8 +68,6 @@
   </div>
 
   <script src="/site.js"></script>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
