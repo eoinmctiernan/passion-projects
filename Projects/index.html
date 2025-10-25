@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Eóin</title>
+  <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" href="/icon.png" type="image/png" sizes="512x512">
+  <meta name="theme-color" content="#c1121f">
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <img src="/logo-horizontal.png" alt="Eóin Mc Tiernan logo" class="logo" />
+        <strong>Projects</strong><span class="muted">/ builds & tools</span>
+      </div>
+      <nav class="nav">
+        <a href="/">Home</a><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/lab/">Lab</a>
+      </nav>
+    </header>
+
+    <section class="section" data-section>
+      <h1>Latest</h1>
+      <div class="grid">
+        <a class="card" data-tilt href="#">
+          <h3>Lead Capture → CRM</h3>
+          <p>Event form → validation → CSV/HubSpot. Edge-safe.</p>
+        </a>
+        <a class="card" data-tilt href="#">
+          <h3>Meeting Notes Summariser</h3>
+          <p>Paste notes → clean, structured summary → export.</p>
+        </a>
+        <a class="card" data-tilt href="#">
+          <h3>Translation Helper</h3>
+          <p>FR↔EN live subtitles demo for hybrid meetings.</p>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Eóin</footer>
+  </div>
+
+  <div id="spotlightOverlay"><div id="spotlight">
+    <input id="spotlightInput" placeholder="Type a command or page…" />
+    <div id="results"></div>
+  </div></div>
+
+  <script src="/site.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
