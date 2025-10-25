@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,15 +7,17 @@
   <link rel="stylesheet" href="/site.css" />
   <link rel="icon" href="/icon.png" type="image/png" sizes="512x512">
   <link rel="apple-touch-icon" href="/icon.png">
-  <meta name="theme-color" content="#c1121f">
+  <meta name="theme-color" content="#0b0c0f">
   <meta property="og:image" content="/icon.png">
+  <meta property="og:title" content="About — Eóin">
+  <meta property="og:description" content="Market development, digital ops, and automation experiments.">
 </head>
 <body>
   <div class="container">
     <header class="topbar">
-      <div class="brand-wrap">
-        <img src="/logo-horizontal.png" alt="Eóin Mc Tiernan logo" class="logo" />
-        <strong>About</strong><span class="muted">/ how I work</span>
+      <div class="brand">
+        <img src="/logo-horizontal.png" alt="Eóin logo" class="logo" />
+        <span class="muted">/ how I work</span>
       </div>
       <nav class="nav">
         <a href="/">Home</a><a href="/about/">About</a><a href="/projects/">Projects</a><a href="/lab/">Lab</a>
@@ -24,10 +26,10 @@
 
     <section class="section" data-section>
       <h1>Market development + digital ops</h1>
-      <p class="muted">I help teams turn intent into outcomes: clear systems, tight feedback loops, crisp visibility.</p>
+      <p class="muted">I help teams turn intent into outcomes: clear systems, tight feedback loops, and crisp visibility.</p>
       <div class="grid">
         <div class="card" data-tilt>
-          <h3>What I optimise</h3>
+          <h3 style="color:var(--brand)">What I optimise</h3>
           <ul>
             <li>Lead capture → scoring → handoff</li>
             <li>Tooling for pipeline visibility</li>
@@ -35,7 +37,7 @@
           </ul>
         </div>
         <div class="card" data-tilt>
-          <h3>How I work</h3>
+          <h3 style="color:var(--brand)">How I work</h3>
           <ul>
             <li>Lightweight experiments → scale</li>
             <li>Default to automation</li>
@@ -43,9 +45,9 @@
           </ul>
         </div>
         <div class="card" data-tilt>
-          <h3>Now exploring</h3>
+          <h3 style="color:var(--brand)">Now exploring</h3>
           <ul>
-            <li>Low-code AI notes/translation</li>
+            <li>Low-code AI note/translation</li>
             <li>Event → CRM automation</li>
             <li>Scalable reporting templates</li>
           </ul>
@@ -56,40 +58,26 @@
     <section class="section" data-section>
       <h2>Timeline</h2>
       <div id="filters" class="filters">
-        <button class="chip" data-key="ei" data-active="true">Enterprise Ireland</button>
         <button class="chip" data-key="ai" data-active="true">AI & Automation</button>
         <button class="chip" data-key="events" data-active="true">Events & Ecosystem</button>
         <button class="chip" data-key="side" data-active="true">Side projects</button>
       </div>
       <div class="timeline">
-        <div class="entry" data-tags="ei,events">
-          <h4>2024–25 — EI France</h4>
-          <p class="muted">Portfolio of 40 Irish tech clients; trade shows → deal flow; systemising reporting.</p>
-        </div>
-        <div class="entry" data-tags="ai,ei">
-          <h4>2025 — Ops visibility pilots</h4>
-          <p class="muted">Notes → summaries → CRM; live FR↔EN translation experiments.</p>
-        </div>
-        <div class="entry" data-tags="side,ai">
-          <h4>Ongoing — Personal Lab</h4>
-          <p class="muted">Public experiments with free AI APIs, tiny tools, and dashboards.</p>
-        </div>
+        <div class="entry" data-tags="ei,events"><h4>2024–25 — EI France</h4><p class="muted">Portfolio of 40 Irish tech clients; trade shows → deal flow; systemising reporting.</p></div>
+        <div class="entry" data-tags="ai,ei"><h4>2025 — Ops visibility pilots</h4><p class="muted">Notes → summaries → CRM; live FR↔EN translation experiments.</p></div>
+        <div class="entry" data-tags="side,ai"><h4>Ongoing — Personal Lab</h4><p class="muted">Public experiments with free AI APIs, tiny tools, and dashboards.</p></div>
       </div>
     </section>
 
     <section class="section" data-section>
       <h2>Contact</h2>
-      <p>Say hi: <a href="mailto:hello@yourdomain.tld">hello@yourdomain.tld</a></p>
+      <p>Say hi: <a class="underline" href="mailto:hello@yourdomain.tld">hello@yourdomain.tld</a></p>
     </section>
 
     <footer class="footer">© <span id="y"></span> Eóin — Press <span class="kbd">Cmd/Ctrl</span>+<span class="kbd">K</span></footer>
   </div>
 
-  <div id="spotlightOverlay"><div id="spotlight">
-    <input id="spotlightInput" placeholder="Type a command or page…" />
-    <div id="results"></div>
-  </div></div>
-
+  <div id="spotlightOverlay"><div id="spotlight"><input id="spotlightInput" placeholder="Type a command or page…" /><div id="results"></div></div></div>
   <script src="/site.js"></script>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
